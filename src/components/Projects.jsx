@@ -20,6 +20,13 @@ import logo_Dopamicaffeine from '../assets/logo_Dopamicaffeine.png';
 import logo_MindraceMaster from '../assets/logo_MindraceMaster.jpeg';
 import RoundedPentagonPhoto from './RoundedPentagonPhoto';
 import { TbBrandCSharp } from "react-icons/tb";
+import Mind1 from '../assets/projects/Mind1.png';
+import Mind2 from '../assets/projects/Mind2.png';
+import Mind3 from '../assets/projects/Mind3.png';
+import Mind4 from '../assets/projects/Mind4.png';
+import Dopa1 from '../assets/projects/Dopa1.png';
+import Dopa2 from '../assets/projects/Dopa2.png';
+import Dopa3 from '../assets/projects/Dopa3.png';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -222,13 +229,27 @@ Intégration de niveaux de difficulté multiples, d'un mode multijoueur et d'un 
             <Grid container spacing={2}>
             <Grid size={6}>
          
-            <RoundedPentagonPhoto image={p1} size={350} />
+            <RoundedPentagonPhoto image={Mind1} size={300} />
           
-            <RoundedPentagonPhoto image={p2} size={350} />
+            <RoundedPentagonPhoto image={Mind2} size={300} />
             </Grid>
             <Grid size={6} style={{ gridRow: 'span 2',  justifyItems: 'center', 
               alignItems: 'center',    display: 'flex' }}>
-            <RoundedPentagonPhoto image={p3} size={350} />
+            <RoundedPentagonPhoto image={Mind3} size={300} />
+            </Grid>
+            </Grid>
+          </Grid>
+          <Grid size={6}>
+            <Grid container spacing={2}>
+            <Grid size={6}>
+         
+            <RoundedPentagonPhoto image={Dopa1} size={300} />
+          
+            <RoundedPentagonPhoto image={Dopa2} size={300} />
+            </Grid>
+            <Grid size={6} style={{ gridRow: 'span 2',  justifyItems: 'center', 
+              alignItems: 'center',    display: 'flex' }}>
+            <RoundedPentagonPhoto image={Dopa3} size={300} />
             </Grid>
             </Grid>
           </Grid>
