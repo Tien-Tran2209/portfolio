@@ -140,7 +140,7 @@ export const TechStack = () => {
     variant="h5"
     sx={{
       fontWeight: "bold",
-      color: "#10B981",
+      color: "#00796b",
      textAlign: "center",
      fontFamily: "'Fira Code', monospace",
      marginBottom : '20px'
@@ -237,56 +237,3 @@ export const TechStack = () => {
     </>
   );
 };
-
-
-
-// export const TechStack = () => {
-//   return (
-//   <Box sx={{ height: "100%", overflowX: "visible" }}>
-//    <Typography
-//     variant="h5"
-//     sx={{
-//       fontWeight: "bold",
-//       color: "#10B981",
-//       mb: 2,
-//       textAlign: "center",
-//       fontFamily: "'Fira Code', monospace"
-//     }}
-//   >
-//     Compétences Techniques
-//   </Typography>
-//   <Box sx={{
-
-//     overflowX: "auto", display: "flex",
-//     justifyContent: "center",
-//     flexWrap: "wrap" }}>
-//     <Stack direction="row" spacing={1}>
-//       {categories.map((category, index) => (
-//         <Paper
-//           key={index}
-//           sx={{
-//             //minWidth: 200,
-//             backgroundColor: "#111827",
-//             color: "#fff",
-//             p: 2,
-//             borderRadius: 2,
-//             flexShrink: 0,
-//           }}
-//         >
-//           <Typography variant="h5" sx={{ mb: 1, fontWeight: "bold",  fontFamily: "'Fira Code', monospace", fontSize :"1.1rem" }}>
-//             {category.title}
-//           </Typography>
-//           <Stack spacing={1}>
-//             {category.items.map((item, idx) => (
-//               <Stack direction="row" spacing={1} alignItems="center" key={idx}>
-//                 {item.icon}
-//                 <Typography sx= {{ fontFamily: "'Fira Code', monospace", fontSize :"0.9rem" }}>{item.name}</Typography>
-//               </Stack>
-//             ))}
-//           </Stack>
-//         </Paper>
-//       ))}
-//     </Stack>
-//     </Box>
-//   </Box>);
-// };

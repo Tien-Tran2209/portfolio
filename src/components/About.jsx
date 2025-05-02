@@ -5,13 +5,6 @@ import profile from '../assets/me.jpg';
 import RoundedPentagonPhoto from './RoundedPentagonPhoto';
 import {TechStack} from './TechStack';
 import { motion } from "framer-motion";
-import Projects from './Projects';
-import {
-    FaHtml5, FaCss3Alt, FaJs, FaAngular, FaReact, FaNodeJs,
-    FaPhp, FaGit, FaGitlab, FaTrello, FaTasks , FaDatabase,
-    FaCogs, FaWindows, FaLinux
-  } from "react-icons/fa";
-
 const MotionBox = motion(Box);
 const MotionTypography = motion(Typography);
 
@@ -22,7 +15,7 @@ export default function About() {
           backgroundColor: "#111827",
           minHeight: "100vh",
           color: "#fff",
-          paddingTop: "20px",
+          paddingTop: "10px",
         }}
       >
         {/* Top content in flex row */}
@@ -39,19 +32,19 @@ export default function About() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 3 }}
                 >
-          <RoundedPentagonPhoto image={profile} size={500} />
+          <RoundedPentagonPhoto image={profile} size={380} />
           </MotionBox>
-          <Box sx={{ maxWidth: '50%', paddingTop: "30px" }}>
+          <Box sx={{ maxWidth: '50%', paddingTop: "10px" }}>
           <Typography component="p" sx={{ color: "#ccc", mb: 1, fontSize: "1.1rem" }}>
           <span style={{ color: "#ff6f61" }}>&lt;span&gt;</span> Bonjour, Je m’appelle Tien{" "}
           <span style={{ color: "#ff6f61" }}>&lt;/span&gt;</span>
         </Typography>
         
-        <Typography variant="h3" sx={{  mb: 1 }}>
+        <Typography variant="h4" sx={{  mb: 1 }}>
           Apprentie{" "}
           <span style={{ color: "#00796b", fontWeight: "bold" }}>{`{Full Stack}`}</span>
         </Typography>
-        <Typography variant="h4" sx={{   mb: 2 }}>
+        <Typography variant="h5" sx={{   mb: 2 }}>
           Web & App
         </Typography>
         <Typography component="p" sx={{ color: "#6b7280", mb: 1, fontSize: "1.1rem" }}>
@@ -60,21 +53,12 @@ export default function About() {
         </Typography>
         <Typography variant="body1" sx={{   color: "#6b7280",
     fontSize: "1rem"}}>
-          &lt;p&gt; Fort d’une formation solide et d’une expérience pratique en   <span style={{ color: "tomato" }}>développement web </span> et <span style={{ color: "tomato" }}>mobile full stack</span>, je suis motivé à intégrer votre équipe en tant qu’apprentie afin de contribuer activement à la conception, au développement et à la livraison de solutions numériques innovantes, tout en renforçant mes compétences dans un environnement professionnel stimulant.
+          &lt;p&gt; Fort d’une formation solide et d’une expérience pratique en   <span style={{ color: "tomato" }}>développement web </span> et <span style={{ color: "tomato" }}>mobile full stack</span>, je suis motivé à intégrer votre équipe en tant qu’apprentie afin de contribuer activement à la conception, au développement et à la livraison de solutions numériques innovantes.
  &lt;/p&gt;
         </Typography>
        
           </Box>
         </Box>
-         {/* Gradient separator */}
-         {/* <Box
-          sx={{
-            height: "1px",
-            width: "70%",
-            background: "linear-gradient(to left, #111827, #10B981)",
-            my: 4 // optional spacing
-          }}
-        /> */}
         <Divider
   sx={{
     height: '1px',
@@ -86,18 +70,6 @@ export default function About() {
 />
             {/* TechStack */}
             <TechStack />
-             {/* <Divider
-  sx={{
-    height: '1px',
-    width: '100%',
-    background: 'linear-gradient(to left, #111827, #10B981)',
-    my: 3,
-    border: 0, // remove default border
-  }}
-/>
-         <Projects /> */}
-  
-    
       </Box>
     );
   }

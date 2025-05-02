@@ -136,7 +136,7 @@ Intégration de niveaux de difficulté multiples, d'un mode multijoueur et d'un 
   viewport={{ once: true, amount: 0.1 }} // start animation when 30% of the section is visible
     >
            <Grid container spacing={2}>
-          <Grid size={6}>
+          <Grid size={7}>
           {projects.map((project, index) => (
       
       <Step key={index} active sx={{width : '100%'}}>
@@ -225,7 +225,7 @@ Intégration de niveaux de difficulté multiples, d'un mode multijoueur et d'un 
        
     ))}
           </Grid>
-          <Grid size={6}>
+          <Grid size={5}>
             <Grid container spacing={2}>
             <Grid size={6}>
          
