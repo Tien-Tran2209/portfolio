@@ -20,13 +20,13 @@ import logo_Dopamicaffeine from '../assets/logo_Dopamicaffeine.png';
 import logo_MindraceMaster from '../assets/logo_MindraceMaster.jpeg';
 import RoundedPentagonPhoto from './RoundedPentagonPhoto';
 import { TbBrandCSharp } from "react-icons/tb";
-import Mind1 from '../assets/projects/Mind1.png';
-import Mind2 from '../assets/projects/Mind2.png';
-import Mind3 from '../assets/projects/Mind3.png';
-import Mind4 from '../assets/projects/Mind4.png';
-import Dopa1 from '../assets/projects/Dopa1.png';
-import Dopa2 from '../assets/projects/Dopa2.png';
-import Dopa3 from '../assets/projects/Dopa3.png';
+import Mind1 from '../assets/projects/Mind1.PNG';
+import Mind2 from '../assets/projects/Mind2.PNG';
+import Mind3 from '../assets/projects/Mind3.PNG';
+import Mind4 from '../assets/projects/Mind4.PNG';
+import Dopa1 from '../assets/projects/Dopa1.PNG';
+import Dopa2 from '../assets/projects/Dopa2.PNG';
+import Dopa3 from '../assets/projects/Dopa3.PNG';
 
 const containerVariants = {
   hidden: { opacity: 0 },
