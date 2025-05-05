@@ -19,7 +19,7 @@ export default function Navbar({ currentTab, onTabChange }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const links = ["A propos", "Projets", "CV", "Contacts"];
+  const links = ["A propos de moi", "Projets", "CV", "Contacts"];
 
   return (
     <>

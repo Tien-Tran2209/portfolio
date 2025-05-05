@@ -1,9 +1,8 @@
 import React from 'react';
 
-const RoundedPentagonPhoto = ({ image, size = 200 }) => {
+const RoundedPentagonPhoto = ({ image }) => {
   return (
-    <div style={{ width: size, height: size }}>
-      <svg width={size} height={size} viewBox="0 0 100 100" style={{ display: 'block' }}>
+      <svg viewBox="0 0 100 100" style={{ width: "70%", height: "auto", display: 'block' }}>
         <defs>
           <clipPath id="rounded-pentagon" clipPathUnits="objectBoundingBox">
             <path
@@ -27,7 +26,6 @@ const RoundedPentagonPhoto = ({ image, size = 200 }) => {
           clipPath="url(#rounded-pentagon)"
         />
       </svg>
-    </div>
   );
 };
 

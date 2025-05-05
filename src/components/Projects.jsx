@@ -8,10 +8,17 @@ import {
   Typography,
   Avatar,
   StepConnector,
-  duration,
-  Grid
+  Grid,
+  useMediaQuery,
+  useTheme,
+  List, ListItem
 } from "@mui/material";
+import {
+  FaNodeJs, FaPhp
+} from "react-icons/fa";
+
 import { motion } from "framer-motion";
+import { styled } from '@mui/system';
 import logo_Competencia from '../assets/logo_Competencia.png';
 import logo_Dopamicaffeine from '../assets/logo_Dopamicaffeine.png';
 import logo_MindraceMaster from '../assets/logo_MindraceMaster.jpeg';
@@ -20,37 +27,7 @@ import Mind2 from '../assets/Mind2.png';
 import Mind3 from '../assets/Mind3.png';
 import Dopa1 from '../assets/Dopa1.png';
 import Compe2 from '../assets/Compe2.png';
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.5,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const styleStepper = {
-  '& .MuiStepConnector-line': {
-    borderColor: '#0f172a',
-  },
-  px: { xs: 2, md: 6 }
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  show: {
-    opacity: 1, y: 0, transition: {
-      duration: 1,
-      ease: "easeOut",
-    },
-  }
-};
-import {
-  FaNodeJs, FaPhp
-} from "react-icons/fa";
+import ImageBox from './ImageBox';
 
 const projects = [
   {
@@ -117,18 +94,79 @@ Déploiement d'une base de données PostgreSQL pour stocker les résultats`,
     photo: Compe2
   },
 ];
+const StyledBox = styled(Box)(({ theme }) => ({
+  backgroundColor: "#10B981",
+  p: 1.5,
+  borderRadius: "50%",
+  color: "white",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginRight: "50px"
+}));
+
+const StyledStepper = styled(Stepper)(({ theme }) => ({
+  '& .MuiStepConnector-line': {
+    borderColor: '#0f172a',
+  },
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
+  [theme.breakpoints.up("md")]: {
+    paddingLeft: theme.spacing(6),
+    paddingRight: theme.spacing(6),
+  }
+}));
+
+const StyledCard = styled(Card)(({ theme }) => ({
+  backgroundColor: "#111827",
+  color: "white",
+  borderRadius: 10,
+  boxShadow: theme.shadows[3],
+  padding: theme.spacing(1.25),
+  border: '1px solid rgba(255, 255, 255, 0.3)'
+}));
+const CustomListItem = styled(ListItem)(({ theme }) => ({
+  padding: '3px',
+  '&::before': {
+    content: '"•"',
+    color: 'white',
+    fontSize: '1.3rem',
+    marginRight: '8px',
+  },
+}));
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  }
+};
+
 
 export default function Projects() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery('(max-width:1300px)');
+  const isMediumScreen = useMediaQuery('(max-width:1500px)');
   return (
     <Box sx={{ backgroundColor: "#0f172a", color: "#fff", width: '100%' }}>
-      {/* <Typography variant="h5" align="center" fontWeight="bold" mb={1} sx ={{ fontFamily: "'Fira Code', monospace",  color: "#10B981",}}>
-          Projets
-        </Typography>
-   */}
-      <Stepper
+      <StyledStepper
         orientation="vertical"
         connector={<StepConnector />}
-        sx={styleStepper}
       >
         <motion.div
           variants={containerVariants}
@@ -136,65 +174,46 @@ export default function Projects() {
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }} // start animation when 30% of the section is visible
         >
-
-
           {projects.map((project, index) => (
 
             <Step key={index} active sx={{ width: '100%' }}>
               <StepLabel
                 icon={
                   <motion.div key={index} variants={itemVariants}>
-                    <Box
-                      sx={{
-                        backgroundColor: "#10B981",
-                        p: 1.5,
-                        borderRadius: "50%",
-                        color: "white",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginRight: "50px"
-                      }}
-                    >
-                      {index == 0 ? <TbBrandCSharp size={20} /> : index == 1 ? <FaPhp size={20} /> : <FaNodeJs size={20} />}
-                    </Box>
+                    <StyledBox >
+                      {index == 2 ? <TbBrandCSharp size={20} /> : index == 0 ? <FaPhp size={20} /> : <FaNodeJs size={20} />}
+                    </StyledBox >
                   </motion.div>
                 }
               >
                 <motion.div key={index} variants={itemVariants}>
-                  <Card
-                    sx={{
-                      backgroundColor: "#111827",
-                      color: "white",
-                      borderRadius: 10,
-                      boxShadow: 3,
-                      padding: '10px',
-                      border: '1px solid',
-                      borderColor: 'rgba(255, 255, 255, 0.3)',
-                    }}
-                  >
+                  <StyledCard>
                     <CardContent>
-                      <Grid container spacing={2}>
-                        <Grid size={6}>
-                          <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+                      <Grid container justifyContent="center"
+                        alignItems="center" spacing={2}>
+                        <Grid size={isSmallScreen ? 12 : isMediumScreen ? 6 : 7}>
+                          <Box
+                            display="flex"
+                            alignItems="center"
+                            mb={1}
+                          >
                             {project.logo}
                             <Typography variant="h6" fontWeight="bold">
                               {project.suject}
                             </Typography>
                           </Box>
-
-                          <Typography sx={{ fontSize: "0.9rem" }} color="#ff6f61">
+                          <Typography fontSize="0.9rem" color="#ff6f61">
                             {project.title}
                           </Typography>
-
                           <Typography variant="body2" sx={{ mt: 1 }}>
-                            <ul>
+                            <List >
                               {project.description.split('\n').map((line, index) => (
-                                <li style={{ marginBottom: '0.7em' }} key={index}>{line}</li>
+                                <CustomListItem>
+                                  {line}
+                                </CustomListItem>
                               ))}
-                            </ul>
+                            </List>
                           </Typography>
-
                           <Box sx={{ mt: 1, display: "flex", flexWrap: "wrap", gap: 1 }}>
                             {project.skills.map((skill, idx) => (
                               <Box
@@ -212,7 +231,6 @@ export default function Projects() {
                               </Box>
                             ))}
                           </Box>
-
                           <Typography
                             variant="caption"
                             color="gray"
@@ -221,47 +239,33 @@ export default function Projects() {
                             {project.duration}
                           </Typography>
                         </Grid>
-                        <Grid size={6}>
+                        <Grid size={isSmallScreen ? 11 : isMediumScreen ? 6 : 5} container
+                          justifyContent="center"
+                          alignItems="center" >
                           {(index == 0 || index == 2) &&
-                            <Box
-                              component="img"
-                              src={project.photo}
-                              alt="Banner"
-                              sx={{ width: '100%', borderRadius: 2 }}
-                            />
+                            <ImageBox src={project.photo} />
                           }
                           {index == 1 && <Grid container spacing={2}>
                             <Grid size={6}>
-
-                              <Box
-                                component="img"
-                                src={Mind2}
-                                alt="Banner"
-                                sx={{ width: '100%', borderRadius: 2 }}
-                              />
+                              <ImageBox src={Mind2} />
                             </Grid>
                             <Grid size={6} style={{
                               gridRow: 'span 2', justifyItems: 'center',
                               alignItems: 'center', display: 'flex'
                             }}>
-                              <Box
-                                component="img"
-                                src={Mind3}
-                                alt="Banner"
-                                sx={{ width: '100%', borderRadius: 2 }}
-                              />
+                              <ImageBox src={Mind3} />
                             </Grid>
                           </Grid>}
                         </Grid>
                       </Grid>
                     </CardContent>
-                  </Card>
+                  </StyledCard>
                 </motion.div>
               </StepLabel>
             </Step>
           ))}
         </motion.div>
-      </Stepper>
+      </StyledStepper>
     </Box>
   );
 }
