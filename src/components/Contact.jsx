@@ -36,7 +36,6 @@ export default function Contact() {
             {/* Avatar Column */}
             <Grid item xs={3} sx={{ display: "flex", justifyContent: "center" }}>
               <Avatar
-                alt="Your Name"
                 src={profile}
                 sx={{ width: 200, height: 200 }}
               />

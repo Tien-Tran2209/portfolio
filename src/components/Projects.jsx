@@ -25,8 +25,8 @@ import logo_MindraceMaster from '../assets/logo_MindraceMaster.jpeg';
 import { TbBrandCSharp } from "react-icons/tb";
 import Mind2 from '../assets/Mind2.png';
 import Mind3 from '../assets/Mind3.png';
-import Dopa1 from '../assets/Dopa1.png';
-import Compe2 from '../assets/Compe2.png';
+import Dopa from '../assets/Dopa.png';
+import Compe from '../assets/Compe.png';
 import ImageBox from './ImageBox';
 
 const projects = [
@@ -50,7 +50,7 @@ Conception et mise en œuvre des processus de gestion des utilisateurs et des co
       "SQL Serveur",
       "Git",
     ],
-    photo: Dopa1
+    photo: Dopa
   },
   {
     logo: <Avatar
@@ -91,7 +91,7 @@ Déploiement d'une base de données PostgreSQL pour stocker les résultats`,
       "PostgreSQL",
       "Git",
     ],
-    photo: Compe2
+    photo: Compe
   },
 ];
 const StyledBox = styled(Box)(({ theme }) => ({

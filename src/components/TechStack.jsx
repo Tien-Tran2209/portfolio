@@ -35,7 +35,7 @@ const ScrollContainer = styled(Box)({
 });
 const CategoryWrapper = styled(Box)({
   minWidth: "10vw",
-  height: "210px",
+  height: "230px",
   width: "250px",
   flexShrink: 0,
   display: "flex",
@@ -48,21 +48,18 @@ const StyledCard = styled(Card)({
   color: "white",
   borderRadius: 16,
   boxShadow: 3,
-  padding: 16,
   border: "1px solid rgba(255, 255, 255, 0.3)",
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
 });
 const TitleText = styled(Typography)({
-  marginBottom: 8,
+  paddingTop : "10px",
   fontWeight: "bold",
   fontSize: "1rem",
   textAlign: "center",
 });
 const StyledStack = styled(Stack)({
-  marginTop: 20,
-  marginLeft: -10,
   display: "flex",
   flexWrap: "wrap",
   flexDirection: "row",
@@ -123,9 +120,9 @@ const categories = [
     title: "Environnements",
     items: [
       { name: "Visual Studio", icon: <ImageIcon src={VisualStudio} /> },
-      { name: "Environnements de test", icon: <Typography>Environnements de test</Typography> },
-      { name: "VS Code", icon: <ImageIcon src={VSCode} /> },
       { name: "VirtualBox", icon: <Typography>VirtualBox</Typography> },
+      { name: "VS Code", icon: <ImageIcon src={VSCode} /> },
+      { name: "Environnements de test", icon: <Typography>Environnements de test</Typography> },
     ],
   },
 ];
@@ -166,14 +163,13 @@ export const TechStack = () => {
         fontWeight="bold"
         color="#00796b"
         textAlign="center"
-        marginBottom='20px'
-
+        marginBottom='5px'
       >
         Compétences Techniques
       </Typography>
       <ScrollContainer   ref={scrollRef}>
         {categories.concat(categories).map((category, index) => (
-          <CategoryWrapper>
+          <CategoryWrapper key={index}>
             <StyledCard>
               <CardContent sx={{ p: 0 }}>
                 <TitleText>
@@ -182,7 +178,7 @@ export const TechStack = () => {
                 <StyledStack>
                   {category.items.map((item, idx) => (
                     <Tooltip title={item.name} arrow key={idx}>
-                      <Box key={idx} paddingLeft='10px' sx={{ m: 1, fontSize: 60 }}>
+                      <Box key={idx} sx={{ m: 1, fontSize: 60 }}>
                         {item.icon}
                       </Box>
                     </Tooltip>

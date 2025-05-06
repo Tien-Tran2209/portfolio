@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, IconButton, Divider } from "@mui/material";
+import { Box, Typography, IconButton, Divider, useMediaQuery } from "@mui/material";
 import profile from '../assets/me.jpg';
 import RoundedPentagonPhoto from './RoundedPentagonPhoto';
 import { TechStack } from './TechStack';
@@ -8,6 +8,7 @@ const MotionBox = motion(Box);
 const MotionTypography = motion(Typography);
 
 export default function About() {
+  const isSmallScreen = useMediaQuery('(max-width:900px)');
   return (
     <Box
       sx={{
@@ -29,12 +30,12 @@ export default function About() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 3 }}
-          sx={{ width: '40%', maxWidth: '40%', display: 'flex', justifyContent: 'center' }}
+          sx={{ width: isSmallScreen ? '90%' : '40%', maxWidth: isSmallScreen ? '70%' : '40%', display: 'flex', justifyContent: 'center' }}
         >
           <RoundedPentagonPhoto image={profile} />
         </MotionBox>
         <Box sx={{
-          maxWidth: '55%',
+          maxWidth: isSmallScreen ? '90%' : '55%',
           alignContent: "center",
         }}>
           <Typography component="p" sx={{ color: "#ccc", mb: 1, fontSize: "1.1rem" }}>
@@ -68,7 +69,7 @@ export default function About() {
           height: '1px',
           width: '97%',
           background: 'linear-gradient(to right, #111827, #00796b)',
-          my: 2,
+          my: 1,
           border: 0, // remove default border
         }}
       />

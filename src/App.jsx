@@ -14,7 +14,6 @@ export default function App() {
     <Box
       sx={{
         backgroundColor: "#111827", // dark navy
-        borderRadius: "20px"
       }}
     >
       <Navbar currentTab={tabIndex} onTabChange={setTabIndex} />
