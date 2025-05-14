@@ -70,6 +70,7 @@ export default function Navbar({ currentTab, onTabChange }) {
                     fontFamily: "'Inter', sans-serif",
                     '&:hover': {
                       borderBottom: '2px solid #00796b',
+                      color:'white'
                     },
                   }}
                   href={`#${label.toLowerCase().replace(/\s/g, "-")}`}
