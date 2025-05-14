@@ -44,23 +44,19 @@ export default function About() {
           </Typography>
 
           <Typography variant="h4" sx={{ mb: 1 }}>
-            Apprentie{" "}
+            Apprentie développeuse {" "}
             <span style={{ color: "#00796b", fontWeight: "bold" }}>{`{Full Stack}`}</span>
           </Typography>
           <Typography variant="h5" sx={{ mb: 2 }}>
-            Web & App
-          </Typography>
-          <Typography component="p" sx={{ color: "#6b7280", mb: 1, fontSize: "1.1rem" }}>
-            &lt;p&gt; Je suis en deuxième année en  <span style={{ color: "#ff6f61" }}>Cycle Expert en Ingénierie Logicielle</span> de  <span style={{ color: "tomato" }}>l'ESIEA</span>.
-            &lt;/p&gt;
+            Web & Mobiles
           </Typography>
           <Typography variant="body1" sx={{
             color: "#6b7280",
             fontSize: "1rem"
           }}>
-            &lt;p&gt; Fort d’une formation solide et d’une expérience pratique en   <span style={{ color: "tomato" }}>développement web </span> et <span style={{ color: "tomato" }}>mobile full stack</span>, je suis motivée à intégrer votre équipe en tant qu’apprentie afin de contribuer activement à la conception, au développement et à la livraison de solutions numériques innovantes.
+            &lt;p&gt; Durant mes formations intensives en <span style={{ color: "#ff6f61" }}>Cycle Expert en Ingénierie Logicielle</span> à  <span style={{ color: "#ff6f61" }}>l’ESIEA</span>, j’ai créé des sites web ainsi qu’un jeu interactif, ce qui m’a permis de renforcer mes compétences en <span style={{ color: "#ff6f61" }}>développement web et mobile</span>. Passionnée, autonome et toujours prête à collaborer, j’aime relever des défis techniques et proposer des solutions innovantes. 
             &lt;/p&gt;
-          </Typography>
+          </Typography >
 
         </Box>
       </Box>
@@ -74,7 +70,7 @@ export default function About() {
         }}
       />
       {/* TechStack */}
-      <TechStack />
+      <TechStack/>
     </Box>
   );
 }

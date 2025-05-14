@@ -48,7 +48,7 @@ Conception et mise en œuvre des processus de gestion des utilisateurs et des co
       "CSS",
       "MySQL",
       "SQL Serveur",
-      "Git",
+      "GitLab",
     ],
     photo: Dopa
   },
@@ -68,7 +68,7 @@ Intégration de niveaux de difficulté multiples, d'un mode multijoueur et d'un 
       "JavaScript",
       "HTML",
       "CSS",
-      "Git"
+      "GitLab"
     ],
     photo: Mind3
   },
@@ -87,9 +87,10 @@ Intégration d'un module de commentaires entre enseignants et élèves
 Déploiement d'une base de données PostgreSQL pour stocker les résultats`,
     skills: [
       "C#",
-      "NextWPFJs",
+      "Architecture MVC",
+      "WPF",
       "PostgreSQL",
-      "Git",
+      "GitLab",
     ],
     photo: Compe
   },
