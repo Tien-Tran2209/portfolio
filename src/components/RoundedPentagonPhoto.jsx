@@ -22,7 +22,8 @@ const RoundedPentagonPhoto = ({ image }) => {
           href={image}
           width="100%"
           height="100%"
-          preserveAspectRatio="xMidYMid slice"
+          // preserveAspectRatio="xMidYMid slice"
+          preserveAspectRatio="xMidYMin slice" 
           clipPath="url(#rounded-pentagon)"
         />
       </svg>

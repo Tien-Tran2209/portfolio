@@ -1,6 +1,6 @@
 import { Box, Typography, Stack, Link, Grid, Avatar } from '@mui/material';
 import { Email, Phone, LocationOn } from '@mui/icons-material';
-import profile from '../assets/me.jpg';
+import profile from '../assets/Ni.jpg';
 
 export default function Contact() {
   return (
@@ -35,9 +35,16 @@ export default function Contact() {
           <Grid container spacing={2} alignItems="center">
             {/* Avatar Column */}
             <Grid item xs={3} sx={{ display: "flex", justifyContent: "center" }}>
+
               <Avatar
                 src={profile}
-                sx={{ width: 200, height: 200 }}
+                sx={{
+                width: 200,
+                height: 200,
+                '& img': {
+                objectPosition: 'center 0px', 
+                }
+              }}
               />
             </Grid>
 

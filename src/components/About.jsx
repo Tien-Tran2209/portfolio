@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, IconButton, Divider, useMediaQuery } from "@mui/material";
-import profile from '../assets/me.jpg';
+import profile from '../assets/Ni.jpg';
 import RoundedPentagonPhoto from './RoundedPentagonPhoto';
 import { TechStack } from './TechStack';
 import { motion } from "framer-motion";
