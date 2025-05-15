@@ -53,8 +53,8 @@ export default function Contact() {
               <Stack spacing={2}>
                 <Stack direction="row" spacing={1} alignItems="center">
                   <Email sx={{ color: '#00bcd4' }} />
-                  <Link href="mailto:thtran@et.esiea.fr" underline="hover" color="inherit">
-                    thtran@et.esiea.fr
+                  <Link href="mailto:tienngo2292@gmail.com" underline="hover" color="inherit">
+                    tienngo2292@gmail.com
                   </Link>
                 </Stack>
 
