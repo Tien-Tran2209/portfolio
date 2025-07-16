@@ -22,11 +22,14 @@ import { styled } from '@mui/system';
 import logo_Competencia from '../assets/logo_Competencia.png';
 import logo_Dopamicaffeine from '../assets/logo_Dopamicaffeine.png';
 import logo_MindraceMaster from '../assets/logo_MindraceMaster.jpeg';
+import logo_Swipe from '../assets/logo_Swipe.png';
 import { TbBrandCSharp } from "react-icons/tb";
 import Mind2 from '../assets/Mind2.png';
 import Mind3 from '../assets/Mind3.png';
 import Dopa from '../assets/Dopa.png';
 import Compe from '../assets/Compe.png';
+import Swipe1 from '../assets/Swipe1.png';
+import Swipe2 from '../assets/Swipe2.png';
 import ImageBox from './ImageBox';
 
 const projects = [
@@ -93,6 +96,32 @@ Déploiement d'une base de données PostgreSQL pour stocker les résultats`,
       "GitLab",
     ],
     photo: Compe
+  },
+  {
+  logo: <Avatar
+    src={logo_Swipe}
+    sx={{ width: 40, height: 40, mr: 2 }}
+  />,
+  suject: "Développement d’une application e-commerce sous forme de réseau social",
+  title: "🏆 2ᵉ place parmi les projets étudiants (16,83/20)",
+  duration: "04/2025 - 07/2025",
+  description: `Création des pages et gestion des actions de création de comptes, publications, réactions, commentaires, ajout de produits au panier, et communication sécurisée avec l’API
+Implémentation d’expérience mobile-first avec navigation par swipe
+Mise en place de l’authentification, de l’autorisation et de la configuration CORS côté API
+Développement des endpoints API avec gestion des droits d’accès selon le profil utilisateur`,
+  skills: [
+    "API Rest",
+    ".NET",
+    "React",
+    "TypeScript",
+    "Identity",
+    "CORS",
+    "Entity Framework",
+    "JWT Token",
+    "Swagger",
+    "Postman"
+  ],
+   photo: [Swipe1, Swipe2]
   },
 ];
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -182,7 +211,7 @@ export default function Projects() {
                 icon={
                   <motion.div key={index} variants={itemVariants}>
                     <StyledBox >
-                      {index == 2 ? <TbBrandCSharp size={20} /> : index == 0 ? <FaPhp size={20} /> : <FaNodeJs size={20} />}
+                      {(index === 2 || index === 3) ? <TbBrandCSharp size={20} /> : index == 0 ? <FaPhp size={20} /> : <FaNodeJs size={20} />}
                     </StyledBox >
                   </motion.div>
                 }
@@ -241,23 +270,39 @@ export default function Projects() {
                           </Typography>
                         </Grid>
                         <Grid size={isSmallScreen ? 11 : isMediumScreen ? 6 : 5} container
-                          justifyContent="center"
-                          alignItems="center" >
-                          {(index == 0 || index == 2) &&
-                            <ImageBox src={project.photo} />
-                          }
-                          {index == 1 && <Grid container spacing={2}>
-                            <Grid size={6}>
-                              <ImageBox src={Mind2} />
-                            </Grid>
-                            <Grid size={6} style={{
-                              gridRow: 'span 2', justifyItems: 'center',
-                              alignItems: 'center', display: 'flex'
-                            }}>
-                              <ImageBox src={Mind3} />
-                            </Grid>
-                          </Grid>}
-                        </Grid>
+                            justifyContent="center"
+                            alignItems="center"
+                          >
+                            {(index === 0 || index === 2) && (
+                              <ImageBox src={project.photo} />
+                            )}
+
+                            {index === 1 && (
+                              <Grid container spacing={2}>
+                                <Grid size={6}>
+                                  <ImageBox src={Mind2} />
+                                </Grid>
+                                <Grid size={6} style={{
+                                  gridRow: 'span 2',
+                                  justifyItems: 'center',
+                                  alignItems: 'center',
+                                  display: 'flex'
+                                }}>
+                                  <ImageBox src={Mind3} />
+                                </Grid>
+                              </Grid>
+                            )}
+
+                            {index === 3 && project.photo && Array.isArray(project.photo) && (
+                              <Grid container spacing={2}>
+                                {project.photo.map((imgSrc, imgIndex) => (
+                                  <Grid size={6} key={imgIndex}>
+                                    <ImageBox src={imgSrc} />
+                                  </Grid>
+                                ))}
+                              </Grid>
+                            )}
+                          </Grid>
                       </Grid>
                     </CardContent>
                   </StyledCard>

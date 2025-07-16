@@ -11,7 +11,7 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaAngular, FaReact, FaNodeJs,
   FaPhp, FaGit, FaGitlab, FaTrello, FaTasks
 } from "react-icons/fa";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { TbBrandCSharp } from "react-icons/tb";
 import neticon from '../assets/NET.png';
 import netcore from '../assets/NET CORE.png';
@@ -65,7 +65,7 @@ const StyledStack = styled(Stack)({
   flexDirection: "row",
   justifyContent: "center",
 });
-const ImageIcon = styled('img')(({ theme, size = 50 }) => ({
+const ImageIcon = styled('img')(({ size = 50 }) => ({
   width: size,
   height: size
 }));
