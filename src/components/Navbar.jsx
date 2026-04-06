@@ -13,13 +13,14 @@ import {
   useTheme,
 } from "@mui/material";
 import { GitHub, LinkedIn, Code, Menu } from "@mui/icons-material";
+import Experience from "./Experiences";
 
 export default function Navbar({ currentTab, onTabChange }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const links = ["A propos de moi", "Projets", "CV", "Contacts"];
+  const links = ["A propos de moi", "Projets", "CV", "Experiences", "Contacts"];
 
   return (
     <>

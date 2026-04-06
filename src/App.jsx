@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import { CV } from "./components/CV";
 import Projects from "./components/Projects";
+import Experiences from "./components/Experiences";
 import Contact from "./components/Contact";
 import Box from "@mui/material/Box";
 
@@ -21,8 +22,8 @@ export default function App() {
         {tabIndex === 0 && <About />}
         {tabIndex === 1 && <Projects />}
         {tabIndex === 2 && <CV />}
-        {tabIndex === 3 && <Contact />}
-
+        {tabIndex === 3 && <Experiences />}
+        {tabIndex === 4 && <Contact />}
       </main>
     </Box>
   );

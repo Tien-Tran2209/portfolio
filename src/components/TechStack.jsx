@@ -15,6 +15,9 @@ import {
 import { TbBrandCSharp } from "react-icons/tb";
 import neticon from '../assets/NET.png';
 import netcore from '../assets/NET CORE.png';
+import QtLogo from '../assets/Qt.png';
+import Symfony from '../assets/Symfony.png';
+import CPlus from '../assets/CPlus.png';
 import PostgresSQL from '../assets/PostgresSQL.png';
 import MySQL from '../assets/MySQL.png';
 import SQLServer from '../assets/Microsoft SQL Server.png';
@@ -78,6 +81,7 @@ const categories = [
       { name: "Angular", icon: <FaAngular color="#DD0031" /> },
       { name: "HTML", icon: <FaHtml5 color="#E44D26" /> },
       { name: "CSS", icon: <FaCss3Alt color="#1572B6" /> },
+      { name: "Qt", icon: <ImageIcon src={QtLogo} /> },
       { name: "WPF", icon: <Typography>WPF</Typography> },
       { name: "Responsive Design", icon: <Typography>Responsive Design</Typography> },
       { name: "UX/UI", icon: <Typography>UX/UI</Typography> },
@@ -88,7 +92,9 @@ const categories = [
     items: [
       { name: "Node.js", icon: <FaNodeJs color="#339933" /> },
       { name: "PHP", icon: <FaPhp color="#777BB4" /> },
-      { name: "C#", icon: <TbBrandCSharp color="#9B4F96" /> },
+      { name: "C#", icon: <TbBrandCSharp color="#9B4F96" /> },    
+      { name: "CPlus", icon: <ImageIcon src={CPlus} /> },  
+      { name: "Symfony", icon: <ImageIcon src={Symfony} /> },
       { name: "ASP.NET", icon: <ImageIcon src={neticon} /> },
       { name: "ASP CORE.NET", icon: <ImageIcon src={netcore} /> },
       { name: "REST API", icon: <Typography>REST API</Typography> },
