@@ -48,7 +48,7 @@ export default function About() {
             <span style={{ color: "#00796b", fontWeight: "bold" }}>{`{Full Stack}`}</span>
           </Typography>
           <Typography variant="h5" sx={{ mb: 2 }}>
-            Web & Mobiles
+            Web & logiciel
           </Typography>
                     
           <Typography
