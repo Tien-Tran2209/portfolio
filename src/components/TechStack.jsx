@@ -23,6 +23,8 @@ import MySQL from '../assets/MySQL.png';
 import SQLServer from '../assets/Microsoft SQL Server.png';
 import VSCode from '../assets/VSCode.png';
 import VisualStudio from '../assets/Visual Studio.png';
+import NoSQL from '../assets/no-sql-logo.png';
+
 const ScrollContainer = styled(Box)({
   display: "flex",
   justifyContent: "center",
@@ -107,7 +109,7 @@ const categories = [
       { name: "MySQL", icon: <ImageIcon src={MySQL} /> },
       { name: "SQL Server", icon: <ImageIcon src={SQLServer} /> },
       { name: "PostgreSQL", icon: <ImageIcon src={PostgresSQL} /> },
-      { name: "Schémas relationnels", icon: <Typography>Schémas relationnels</Typography> },
+      { name: "NoSQL", icon: <ImageIcon src={NoSQL} /> },
     ],
   },
   {

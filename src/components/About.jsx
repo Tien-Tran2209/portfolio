@@ -50,13 +50,32 @@ export default function About() {
           <Typography variant="h5" sx={{ mb: 2 }}>
             Web & Mobiles
           </Typography>
-          <Typography variant="body1" sx={{
-            color: "#6b7280",
-            fontSize: "1rem"
-          }}>
-            &lt;p&gt; Durant mes formations intensives en <span style={{ color: "#ff6f61" }}>Cycle Expert en Ingénierie Logicielle</span> à  <span style={{ color: "#ff6f61" }}>l’ESIEA</span>, j’ai créé des sites web ainsi qu’un jeu interactif, ce qui m’a permis de renforcer mes compétences en <span style={{ color: "#ff6f61" }}>développement web et mobile</span>. Passionnée, autonome et toujours prête à collaborer, j’aime relever des défis techniques et proposer des solutions innovantes. 
-            &lt;/p&gt;
-          </Typography >
+                    
+          <Typography
+            variant="body1"
+            sx={{
+              color: "#9ca3af",
+              fontSize: "1rem",
+              lineHeight: 1.8,
+            }}
+          >
+            &lt;p&gt; Diplômée d’un Bachelor en développement d’applications à{" "}
+            <span style={{ color: "#ff6f61" }}>l’ESIEA</span> et actuellement
+            en Mastère en{" "}
+            <span style={{ color: "#ff6f61" }}>
+              ingénierie de l’intelligence artificielle
+            </span>
+            , j’ai acquis des compétences en{" "}
+            <span style={{ color: "#ff6f61" }}>
+              développement web et logiciel
+            </span>{" "}
+            à travers mes projets et mon expérience en alternance.
+            J’ai travaillé sur des interfaces utilisateur, des applications
+            full-stack et des solutions logicielles en C++/Qt.
+            Autonome, rigoureuse et curieuse, je souhaite continuer à
+            développer mes compétences et contribuer à de nouveaux
+            projets techniques. &lt;/p&gt;
+          </Typography>
 
         </Box>
       </Box>

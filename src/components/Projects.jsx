@@ -11,119 +11,189 @@ import {
   Grid,
   useMediaQuery,
   useTheme,
-  List, ListItem
+  List,
+  ListItem
 } from "@mui/material";
-import {
-  FaNodeJs, FaPhp
-} from "react-icons/fa";
 
-import { motion } from "framer-motion";
-import { styled } from '@mui/system';
-import logo_Competencia from '../assets/logo_Competencia.png';
-import logo_Dopamicaffeine from '../assets/logo_Dopamicaffeine.png';
-import logo_MindraceMaster from '../assets/logo_MindraceMaster.jpeg';
-import logo_Swipe from '../assets/logo_Swipe.png';
+import { FaNodeJs, FaPhp } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
-import Mind2 from '../assets/Mind2.png';
-import Mind3 from '../assets/Mind3.png';
-import Dopa from '../assets/Dopa.png';
-import Compe from '../assets/Compe.png';
-import Swipe1 from '../assets/Swipe1.png';
-import Swipe2 from '../assets/Swipe2.png';
-import ImageBox from './ImageBox';
+import { motion } from "framer-motion";
+import { styled } from "@mui/system";
+
+import logo_Competencia from "../assets/logo_Competencia.png";
+import logo_Dopamicaffeine from "../assets/logo_Dopamicaffeine.png";
+import logo_MindraceMaster from "../assets/logo_MindraceMaster.jpeg";
+import logo_Swipe from "../assets/logo_Swipe.png";
+
+import Mind2 from "../assets/Mind2.png";
+import Mind3 from "../assets/Mind3.png";
+import Dopa from "../assets/Dopa.png";
+import Compe from "../assets/Compe.png";
+import Swipe1 from "../assets/Swipe1.png";
+import Swipe2 from "../assets/Swipe2.png";
+
+import Hobbini1 from "../assets/Hobbini1.png";
+import Hobbini2 from "../assets/Hobbini2.png";
+import Hobbini4 from "../assets/Hobbini4.png";
+import Hobbini5 from "../assets/Hobbini5.png";
+
+import ImageBox from "./ImageBox";
 
 const projects = [
   {
-    logo: <Avatar
-      src={logo_Dopamicaffeine}
-      sx={{ width: 40, height: 40, mr: 2 }}
-    />,
-    suject: "Création d'une plateforme web de partage de contenus",
-    title: " 🏆 Projet classé 1ᵉʳ parmi les projets de 1ʳᵉ année (18,64/20)",
-    duration: "05/2024 - 07/2024",
-    description: `Conception et implémentation l’architecture MVC du projet
-Création d'une base de donnée relationnelle avec des tables interconnectées pour gérer les données
-Développement des fonctionnalités front-end : pages d'inscription, de connexion, de publication et de consultation de contenu
-Conception et mise en œuvre des processus de gestion des utilisateurs et des contenus, incluant l'ajout, la modification, l'affichage et la suppression`,
+    logo: (
+      <Avatar
+        sx={{
+          width: 40,
+          height: 40,
+          mr: 2,
+          bgcolor: "#334155"
+        }}
+      >
+        H
+      </Avatar>
+    ),
+    suject: "Hobbini – Application web de vente en ligne et de gestion",
+    title: "",
+    duration: "04/2026 - 06/2026",
+
+    description: `Développement full-stack d'une plateforme web, intégrant les interfaces utilisateur, la logique métier et la gestion des données.
+Développement d'endpoints API REST métier, sécurisés par JWT, avec intégration du paiement Stripe.
+Conteneurisation avec Docker et CI/CD via GitHub Actions pour automatiser les tests et le déploiement.`,
+
     skills: [
+      "Symfony 7",
       "PHP",
-      "HTML",
-      "CSS",
+      "Twig",
+      "Doctrine ORM",
       "MySQL",
-      "SQL Serveur",
-      "GitLab",
+      "Docker",
+      "Redis",
+      "JWT",
+      "Stripe",
+      "Swagger",
+      "GitHub Actions"
     ],
-    photo: Dopa
+
+    photo: [Hobbini1]
   },
+
   {
-    logo: <Avatar
-      src={logo_MindraceMaster}
-      sx={{ width: 40, height: 40, mr: 2 }}
-    />,
-    suject: "Développement d’un jeu de mémoire en ligne",
-    title: " 🏆 2ᵉ meilleur projet de 1ʳᵉ année (19,17/20)",
-    duration: "11/2023 - 01/2024",
-    description: `Création d'interface utilisateur dynamiques et réactives (GUI)
-Mise en place d'un système d'authentification et développement de la logique du jeu
-Intégration de niveaux de difficulté multiples, d'un mode multijoueur et d'un système de sauvegarde des scores pour enrichir l'expérience utilisateur`,
+    logo: (
+      <Avatar
+        src={logo_Swipe}
+        sx={{ width: 40, height: 40, mr: 2 }}
+      />
+    ),
+
+    suject: "Plateforme de social commerce mobile-first",
+    title: "🏆 2ᵉ place parmi les projets étudiants (16,83/20)",
+    duration: "04/2025 - 07/2025",
+
+    description: `Développement d'interfaces utilisateur responsive selon une approche mobile-first avec React et TypeScript, intégrant le partage de contenus multimédias, les interactions sociales et une navigation par swipe.
+Création d'une API REST en .NET pour gérer les utilisateurs, les publications, les interactions et les produits.
+Ajout de l'authentification et des droits d'accès selon les profils utilisateurs.`,
+
     skills: [
-      "Node.js",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "GitLab"
+      "API REST",
+      ".NET",
+      "React",
+      "TypeScript",
+      "Identity",
+      "CORS",
+      "Entity Framework",
+      "JWT Token",
+      "Swagger",
+      "Postman"
     ],
-    photo: Mind3
+
+    photo: [Swipe1, Swipe2]
   },
+
   {
-    logo: <Avatar
-      src={logo_Competencia}
-      sx={{ width: 40, height: 40, mr: 2 }}
-    />,
-    suject: "Conception d'une plateforme de gestion des compétences scolaires",
+    logo: (
+      <Avatar
+        src={logo_Competencia}
+        sx={{ width: 40, height: 40, mr: 2 }}
+      />
+    ),
+
+    suject: "Competencia – Plateforme de gestion des compétences scolaires",
     title: "",
     duration: "11/2024 - 01/2025",
-    description: `Conception de l'architecture de l'application (modèle MVC)
-Développement d'interfaces graphiques interactives sous WPF
-Mise en place des opérations de création, consultation, modification et suppression des compétences et évaluations
-Intégration d'un module de commentaires entre enseignants et élèves
-Déploiement d'une base de données PostgreSQL pour stocker les résultats`,
+
+    description: `Création de l'architecture MVC de l'application.
+Développement d'interfaces graphiques interactives avec WPF.
+Gestion des compétences et évaluations, avec un module de commentaires entre enseignants et élèves.
+Mise en place d'une base de données PostgreSQL pour les résultats.`,
+
     skills: [
       "C#",
-      "Architecture MVC",
+      "MVC",
       "WPF",
       "PostgreSQL",
-      "GitLab",
+      "GitLab"
     ],
+
     photo: Compe
   },
+
   {
-  logo: <Avatar
-    src={logo_Swipe}
-    sx={{ width: 40, height: 40, mr: 2 }}
-  />,
-  suject: "Développement d’une application e-commerce sous forme de réseau social",
-  title: "🏆 2ᵉ place parmi les projets étudiants (16,83/20)",
-  duration: "04/2025 - 07/2025",
-  description: `Création des pages et gestion des actions de création de comptes, publications, réactions, commentaires, ajout de produits au panier, et communication sécurisée avec l’API
-Implémentation d’expérience mobile-first avec navigation par swipe
-Mise en place de l’authentification, de l’autorisation et de la configuration CORS côté API
-Développement des endpoints API avec gestion des droits d’accès selon le profil utilisateur`,
-  skills: [
-    "API Rest",
-    ".NET",
-    "React",
-    "TypeScript",
-    "Identity",
-    "CORS",
-    "Entity Framework",
-    "JWT Token",
-    "Swagger",
-    "Postman"
-  ],
-   photo: [Swipe1, Swipe2]
+    logo: (
+      <Avatar
+        src={logo_Dopamicaffeine}
+        sx={{ width: 40, height: 40, mr: 2 }}
+      />
+    ),
+
+    suject: "Dopamicaffeine – Site social de partage de contenus culturels",
+    title: "🏆 1ʳᵉ place parmi les projets étudiants (18,64/20)",
+    duration: "05/2024 - 07/2024",
+
+    description: `Développement des interfaces web utilisateur en HTML et CSS.
+Création de la logique métier côté backend pour gérer les contenus, la recherche et le filtrage de contenus.
+Mise en place des tables et leurs relations pour stocker les données.`,
+
+    skills: [
+      "HTML",
+      "CSS",
+      "PHP",
+      "MySQL",
+      "SQL",
+      "Git",
+      "GitLab"
+    ],
+
+    photo: Dopa
   },
+
+  {
+    logo: (
+      <Avatar
+        src={logo_MindraceMaster}
+        sx={{ width: 40, height: 40, mr: 2 }}
+      />
+    ),
+
+    suject: "MindraceMaster – Jeu de mémoire de cartes (solo ou multijoueur)",
+    title: "🏆 2ᵉ place parmi les projets étudiants (19,17/20)",
+    duration: "11/2023 - 01/2024",
+
+    description: `Front-end interactif et système d'authentification.
+Niveaux de difficulté multiples et sauvegarde des scores.
+Mode multijoueur avec gestion des tours.`,
+
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js"
+    ],
+
+    photo: [Mind2, Mind3]
+  }
 ];
+
 const StyledBox = styled(Box)(({ theme }) => ({
   backgroundColor: "#10B981",
   p: 1.5,
@@ -136,14 +206,16 @@ const StyledBox = styled(Box)(({ theme }) => ({
 }));
 
 const StyledStepper = styled(Stepper)(({ theme }) => ({
-  '& .MuiStepConnector-line': {
-    borderColor: '#0f172a',
+  "& .MuiStepConnector-line": {
+    borderColor: "#0f172a"
   },
+
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
+
   [theme.breakpoints.up("md")]: {
     paddingLeft: theme.spacing(6),
-    paddingRight: theme.spacing(6),
+    paddingRight: theme.spacing(6)
   }
 }));
 
@@ -153,47 +225,64 @@ const StyledCard = styled(Card)(({ theme }) => ({
   borderRadius: 10,
   boxShadow: theme.shadows[3],
   padding: theme.spacing(1.25),
-  border: '1px solid rgba(255, 255, 255, 0.3)'
+  border: "1px solid rgba(255, 255, 255, 0.3)"
 }));
+
 const CustomListItem = styled(ListItem)(({ theme }) => ({
-  padding: '3px',
-  '&::before': {
+  padding: "3px",
+
+  "&::before": {
     content: '"•"',
-    color: 'white',
-    fontSize: '1.3rem',
-    marginRight: '8px',
-  },
+    color: "white",
+    fontSize: "1.3rem",
+    marginRight: "8px"
+  }
 }));
+
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0
+  },
+
   show: {
     opacity: 1,
     transition: {
       staggerChildren: 0.5,
-      delayChildren: 0.2,
-    },
-  },
+      delayChildren: 0.2
+    }
+  }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: {
+    opacity: 0,
+    y: 50
+  },
+
   show: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 1,
-      ease: "easeOut",
-    },
+      ease: "easeOut"
+    }
   }
 };
 
-
 export default function Projects() {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery('(max-width:1300px)');
-  const isMediumScreen = useMediaQuery('(max-width:1500px)');
+
+  const isSmallScreen = useMediaQuery("(max-width:1300px)");
+  const isMediumScreen = useMediaQuery("(max-width:1500px)");
+
   return (
-    <Box sx={{ backgroundColor: "#0f172a", color: "#fff", width: '100%' }}>
+    <Box
+      sx={{
+        backgroundColor: "#0f172a",
+        color: "#fff",
+        width: "100%"
+      }}
+    >
       <StyledStepper
         orientation="vertical"
         connector={<StepConnector />}
@@ -202,49 +291,102 @@ export default function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.1 }} // start animation when 30% of the section is visible
+          viewport={{
+            once: true,
+            amount: 0.1
+          }}
         >
           {projects.map((project, index) => (
-
-            <Step key={index} active sx={{ width: '100%' }}>
+            <Step
+              key={index}
+              active
+              sx={{ width: "100%" }}
+            >
               <StepLabel
                 icon={
-                  <motion.div key={index} variants={itemVariants}>
-                    <StyledBox >
-                      {(index === 2 || index === 3) ? <TbBrandCSharp size={20} /> : index == 0 ? <FaPhp size={20} /> : <FaNodeJs size={20} />}
-                    </StyledBox >
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                  >
+                    <StyledBox>
+                      {project.skills.includes("C#") ||
+                      project.skills.includes(".NET") ? (
+                        <TbBrandCSharp size={20} />
+                      ) : project.skills.includes("PHP") ? (
+                        <FaPhp size={20} />
+                      ) : (
+                        <FaNodeJs size={20} />
+                      )}
+                    </StyledBox>
                   </motion.div>
                 }
               >
-                <motion.div key={index} variants={itemVariants}>
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                >
                   <StyledCard>
                     <CardContent>
-                      <Grid container justifyContent="center"
-                        alignItems="center" spacing={2}>
-                        <Grid size={isSmallScreen ? 12 : isMediumScreen ? 6 : 7}>
+                      <Grid
+                        container
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={2}
+                      >
+                        <Grid
+                          size={
+                            isSmallScreen
+                              ? 12
+                              : isMediumScreen
+                                ? 6
+                                : 7
+                          }
+                        >
                           <Box
                             display="flex"
                             alignItems="center"
                             mb={1}
                           >
                             {project.logo}
-                            <Typography variant="h6" fontWeight="bold">
+
+                            <Typography
+                              variant="h6"
+                              fontWeight="bold"
+                            >
                               {project.suject}
                             </Typography>
                           </Box>
-                          <Typography fontSize="0.9rem" color="#ff6f61">
+
+                          <Typography
+                            fontSize="0.9rem"
+                            color="#ff6f61"
+                          >
                             {project.title}
                           </Typography>
-                          <Typography variant="body2" sx={{ mt: 1 }}>
-                            <List >
-                              {project.description.split('\n').map((line, index) => (
-                                <CustomListItem>
-                                  {line}
-                                </CustomListItem>
-                              ))}
+
+                          <Typography
+                            variant="body2"
+                            sx={{ mt: 1 }}
+                          >
+                            <List>
+                              {project.description
+                                .split("\n")
+                                .map((line, index) => (
+                                  <CustomListItem key={index}>
+                                    {line}
+                                  </CustomListItem>
+                                ))}
                             </List>
                           </Typography>
-                          <Box sx={{ mt: 1, display: "flex", flexWrap: "wrap", gap: 1 }}>
+
+                          <Box
+                            sx={{
+                              mt: 1,
+                              display: "flex",
+                              flexWrap: "wrap",
+                              gap: 1
+                            }}
+                          >
                             {project.skills.map((skill, idx) => (
                               <Box
                                 key={idx}
@@ -254,55 +396,56 @@ export default function Projects() {
                                   py: 0.5,
                                   borderRadius: 1,
                                   fontSize: "0.75rem",
-                                  fontFamily: "monospace",
+                                  fontFamily: "monospace"
                                 }}
                               >
                                 {skill}
                               </Box>
                             ))}
                           </Box>
+
                           <Typography
                             variant="caption"
                             color="gray"
-                            sx={{ display: "block", mt: 2 }}
+                            sx={{
+                              display: "block",
+                              mt: 2
+                            }}
                           >
                             {project.duration}
                           </Typography>
                         </Grid>
-                        <Grid size={isSmallScreen ? 11 : isMediumScreen ? 6 : 5} container
-                            justifyContent="center"
-                            alignItems="center"
-                          >
-                            {(index === 0 || index === 2) && (
+
+                        <Grid
+                          size={
+                            isSmallScreen
+                              ? 11
+                              : isMediumScreen
+                                ? 6
+                                : 5
+                          }
+                          container
+                          justifyContent="center"
+                          alignItems="center"
+                        >
+                          {project.photo &&
+                            (Array.isArray(project.photo) ? (
+                              <Grid container spacing={2}>
+                                {project.photo.map(
+                                  (imgSrc, imgIndex) => (
+                                    <Grid
+                                      size={index === 0 ? 12 : 6}
+                                      key={imgIndex}
+                                    >
+                                      <ImageBox src={imgSrc} />
+                                    </Grid>
+                                  )
+                                )}
+                              </Grid>
+                            ) : (
                               <ImageBox src={project.photo} />
-                            )}
-
-                            {index === 1 && (
-                              <Grid container spacing={2}>
-                                <Grid size={6}>
-                                  <ImageBox src={Mind2} />
-                                </Grid>
-                                <Grid size={6} style={{
-                                  gridRow: 'span 2',
-                                  justifyItems: 'center',
-                                  alignItems: 'center',
-                                  display: 'flex'
-                                }}>
-                                  <ImageBox src={Mind3} />
-                                </Grid>
-                              </Grid>
-                            )}
-
-                            {index === 3 && project.photo && Array.isArray(project.photo) && (
-                              <Grid container spacing={2}>
-                                {project.photo.map((imgSrc, imgIndex) => (
-                                  <Grid size={6} key={imgIndex}>
-                                    <ImageBox src={imgSrc} />
-                                  </Grid>
-                                ))}
-                              </Grid>
-                            )}
-                          </Grid>
+                            ))}
+                        </Grid>
                       </Grid>
                     </CardContent>
                   </StyledCard>

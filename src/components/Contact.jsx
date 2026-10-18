@@ -1,6 +1,6 @@
 import { Box, Typography, Stack, Link, Grid, Avatar } from '@mui/material';
 import { Email, Phone, LocationOn } from '@mui/icons-material';
-import profile from '../assets/Ni.jpg';
+import profile from '../assets/TRAN.jpg';
 
 export default function Contact() {
   return (
